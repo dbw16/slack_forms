@@ -23,8 +23,11 @@ def test_sample_form_1():
         "b": {"some": "asfa", "daf": "deafa", "some_thing_2": {"value": "2"}},
     }
 
-    sample_form: main.SampleForm = main.SampleForm.from_form_response(sample_form_response)
+    sample_form: main.SampleForm = main.SampleForm.from_form_response(
+        sample_form_response
+    )
     assert sample_form == main.SampleForm(some_thing_2="2", some_thing_4="woooo")
+
 
 def test_sample_form_1_with_bad_data():
     sample_form_response = {
@@ -37,4 +40,3 @@ def test_sample_form_1_with_bad_data():
     }
     with pytest.raises(ValueError):
         main.SampleForm = main.SampleForm.from_form_response(sample_form_response)
-
