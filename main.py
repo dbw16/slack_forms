@@ -111,15 +111,3 @@ class BadSampleForm(Form):
             ]
         ).build()
 
-
-sample_form_response = {
-    "some_thing_1": {
-        "some": "asfa",
-        "daf": "deafa",
-        "some_thing_4": {"value": "woooo"},
-    },
-    "b": {"some": "asfa", "daf": "deafa", "some_thing_2": {"value": "2"}},
-}
-
-sample_form: SampleForm = SampleForm.from_form_response(sample_form_response)
-print(sample_form)
