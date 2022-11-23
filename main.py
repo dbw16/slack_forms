@@ -5,6 +5,7 @@ from abc import ABC, abstractmethod
 from typing import Tuple
 from collections import defaultdict
 
+
 def gen_dict_extract(var: dict, key: str):
     if isinstance(var, dict):
         for k, v in var.items():
@@ -82,6 +83,7 @@ class SampleForm(Form):
             ]
         ).build()
 
+
 @dataclass
 class BadSampleForm(Form):
     # A list of variables we want from the user, note these variable names much match 1 to 1 with the action_id in
@@ -110,4 +112,3 @@ class BadSampleForm(Form):
                 ),
             ]
         ).build()
-
